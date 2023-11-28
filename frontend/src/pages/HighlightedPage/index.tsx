@@ -25,7 +25,7 @@ const HighlightedPage: React.FC<HighlightedPageProps> = ({
 	return (
 		<Container size={size}>
 			{
-				highlightWord.word.split("").map((letter, index) => {
+				highlightWord?.word?.split("").map((letter, index) => {
 					return (
 						<span key={index} className={`letter ${indexHasToHighlight(index) ? "highlight" : ""}`}>{letter}</span>
 					)

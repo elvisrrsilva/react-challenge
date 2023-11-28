@@ -37,8 +37,14 @@ const MainPage: React.FC = () => {
 	const highlight = async () => {
 
 		const { firstName, lastName } = form;
-		if (!firstName || !lastName) {
-			await AlertBox.error("Missing fields", "Please fill first name and last name before Breakify");
+		
+		if (!firstName) {
+			await AlertBox.error("First Name requied", "Please fill First Name!");
+			return;
+		}
+		
+		if (!lastName) {
+			await AlertBox.error("Last Name requied", "Please fill Last Name!");
 			return;
 		}
 		dispatch(createNewHighlight({ firstName, lastName }));
