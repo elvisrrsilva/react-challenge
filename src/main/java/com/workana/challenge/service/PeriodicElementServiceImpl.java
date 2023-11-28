@@ -27,7 +27,7 @@ public class PeriodicElementServiceImpl implements PeriodicElementService {
 		var symbols = Arrays.stream(PeriodicElement.values())
                 .sorted(Comparator.comparing(PeriodicElement::symbolLength).reversed())
                 .map(PeriodicElement::symbol)
-//                .map(String::toLowerCase)
+                .map(String::toLowerCase)
                 .collect(Collectors.joining("|"));
         var pattern = Pattern.compile("(" + symbols + ")");
 		
@@ -38,8 +38,7 @@ public class PeriodicElementServiceImpl implements PeriodicElementService {
 	}
 
 	private WordHighlight match(Pattern pattern, String word) {
-		Matcher matcher = pattern.matcher(word);
-//		Matcher matcher = pattern.matcher(word.toLowerCase());
+		Matcher matcher = pattern.matcher(word.toLowerCase());
 		WordHighlight wordResult = new WordHighlight(word, new ArrayList<>());
 
 		while (matcher.find()) {

@@ -41,8 +41,7 @@ public enum PeriodicElement {
 	}
 
 	public static Map<String, PeriodicElement> map() {
-		return Arrays.stream(values()).collect(Collectors.toMap(k -> k.symbol(), value -> value));
-//		return Arrays.stream(values()).collect(Collectors.toMap(k -> k.symbol().toLowerCase(), value -> value));
+		return Arrays.stream(values()).collect(Collectors.toMap(k -> k.symbol().toLowerCase(), value -> value));
 	}
 
 	public String symbol() {

@@ -15,7 +15,7 @@ class PeriodicElementTest extends AbstractIntegrationTest {
     void testSymbolAsMapValue() {
         var map = PeriodicElement.map();
         assertEquals(118, map.size());
-        assertEquals(PeriodicElement.CURIUM, map.get("Cm"));
+        assertEquals(PeriodicElement.CURIUM, map.get("cm"));
     }
 
 }
