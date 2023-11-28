@@ -134,7 +134,7 @@
                     <images>
                         <image>
                             <name>elvisrrsilva/${project.name}:${project.version}</name>
-                            <alias>breakify</alias>
+                            <alias>react-challenge</alias>
                             <build>
                                 <from>openjdk:22-ea-21-oracle</from>
                                 <assembly>
