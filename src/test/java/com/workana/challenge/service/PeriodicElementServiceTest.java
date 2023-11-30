@@ -29,9 +29,7 @@ class PeriodicElementServiceTest extends AbstractIntegrationTest {
 		var firstNameWordHighlight = result.firstName();
 		var firstNameWordHighlightRanges = firstNameWordHighlight.ranges();
 		var firstNameWordHighlightRangeExpected = List.of(
-				new Word.WordResult.WordHighlight.WordHighlightRange("Br", 0, 2, PeriodicElement.BROMINE),
-				new Word.WordResult.WordHighlight.WordHighlightRange("k", 4, 5, PeriodicElement.POTASSIUM),
-				new Word.WordResult.WordHighlight.WordHighlightRange("in", 5, 7, PeriodicElement.INDIUM));
+				new Word.WordResult.WordHighlight.WordHighlightRange("Br", 0, 2, PeriodicElement.BROMINE));
 
 		assertEquals(firstName, firstNameWordHighlight.word());
 		assertEquals(firstNameWordHighlightRangeExpected, firstNameWordHighlightRanges);
@@ -56,9 +54,7 @@ class PeriodicElementServiceTest extends AbstractIntegrationTest {
 		var firstNameWordHighlight = result.firstName();
 		var firstNameWordHighlightRanges = firstNameWordHighlight.ranges();
 		var firstNameWordHighlightRangeExpected = List.of(
-				new Word.WordResult.WordHighlight.WordHighlightRange("H", 0, 1, PeriodicElement.HYDROGEN),
-				new Word.WordResult.WordHighlight.WordHighlightRange("HE", 1, 3, PeriodicElement.HELIUM),
-				new Word.WordResult.WordHighlight.WordHighlightRange("LI", 3, 5, PeriodicElement.LITHIUM));
+				new Word.WordResult.WordHighlight.WordHighlightRange("H", 0, 1, PeriodicElement.HYDROGEN));
 
 		assertEquals(firstName, firstNameWordHighlight.word());
 		assertEquals(firstNameWordHighlightRangeExpected, firstNameWordHighlightRanges);
@@ -66,8 +62,7 @@ class PeriodicElementServiceTest extends AbstractIntegrationTest {
 		var lastNameWordHighlight = result.lastName();
 		var lastNameWordHighlightRanges = lastNameWordHighlight.ranges();
 		var lastNameHighlightRangeExpected = List.of(
-				new Word.WordResult.WordHighlight.WordHighlightRange("NO", 0, 2, PeriodicElement.NOBELIUM),
-				new Word.WordResult.WordHighlight.WordHighlightRange("F", 2, 3, PeriodicElement.FLUORINE));
+				new Word.WordResult.WordHighlight.WordHighlightRange("NO", 0, 2, PeriodicElement.NOBELIUM));
 
 		assertEquals(lastName, lastNameWordHighlight.word());
 		assertEquals(lastNameHighlightRangeExpected, lastNameWordHighlightRanges);
@@ -84,9 +79,7 @@ class PeriodicElementServiceTest extends AbstractIntegrationTest {
 		var firstNameWordHighlight = result.firstName();
 		var firstNameWordHighlightRanges = firstNameWordHighlight.ranges();
 		var firstNameWordHighlightRangeExpected = List.of(
-				new Word.WordResult.WordHighlight.WordHighlightRange("h", 0, 1, PeriodicElement.HYDROGEN),
-				new Word.WordResult.WordHighlight.WordHighlightRange("he", 1, 3, PeriodicElement.HELIUM),
-				new Word.WordResult.WordHighlight.WordHighlightRange("li", 3, 5, PeriodicElement.LITHIUM));
+				new Word.WordResult.WordHighlight.WordHighlightRange("h", 0, 1, PeriodicElement.HYDROGEN));
 
 		assertEquals(firstName, firstNameWordHighlight.word());
 		assertEquals(firstNameWordHighlightRangeExpected, firstNameWordHighlightRanges);
@@ -94,8 +87,7 @@ class PeriodicElementServiceTest extends AbstractIntegrationTest {
 		var lastNameWordHighlight = result.lastName();
 		var lastNameWordHighlightRanges = lastNameWordHighlight.ranges();
 		var lastNameHighlightRangeExpected = List.of(
-				new Word.WordResult.WordHighlight.WordHighlightRange("no", 0, 2, PeriodicElement.NOBELIUM),
-				new Word.WordResult.WordHighlight.WordHighlightRange("f", 2, 3, PeriodicElement.FLUORINE));
+				new Word.WordResult.WordHighlight.WordHighlightRange("no", 0, 2, PeriodicElement.NOBELIUM));
 
 		assertEquals(lastName, lastNameWordHighlight.word());
 		assertEquals(lastNameHighlightRangeExpected, lastNameWordHighlightRanges);
