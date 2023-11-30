@@ -41,7 +41,7 @@ public class PeriodicElementServiceImpl implements PeriodicElementService {
 		Matcher matcher = pattern.matcher(word.toLowerCase());
 		WordHighlight wordResult = new WordHighlight(word, new ArrayList<>());
 
-		while (matcher.find()) {
+		if (matcher.find()) {
 			wordResult.ranges().add(new WordHighlightRange(word.substring(matcher.start(), matcher.end()),
 					matcher.start(), matcher.end(), SYMBOLS.get(matcher.group())));
 		}
